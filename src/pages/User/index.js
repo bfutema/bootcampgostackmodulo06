@@ -18,7 +18,7 @@ import {
 
 export default class User extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: navigation.getParam('user').login,
+    title: navigation.getParam('user').name,
   });
 
   static propTypes = {
@@ -49,7 +49,7 @@ export default class User extends Component {
       <Container>
         <Header>
           <Avatar source={{ uri: user.avatar }} />
-          <Name>{user.login}</Name>
+          <Name>{user.name}</Name>
           <Bio>{user.bio}</Bio>
         </Header>
 
